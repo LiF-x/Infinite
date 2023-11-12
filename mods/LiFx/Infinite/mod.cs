@@ -19,14 +19,14 @@ package LiFxInfinite
 {
   function LiFxInfinite::setup() {
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, changePlayerData, LiFxInfinite);
-    LiFx::registerCallback($LiFx::hooks::onPostInitCallbacks, RegisterBasil, LiFxInfinite);
+    LiFx::registerCallback($LiFx::hooks::onPostInitCallbacks, Datablock, LiFxInfinite);
   }
   function LiFxInfinite::version() {
     return "0.0.1";
   }
-  function LiFxInfinite::RegisterBasil() {
-    BasilMod::pack_content("art/datablocks/player.cs", "mods/LiFx/Infinite/player.cs");
-  }
+   function LiFxInfinite::Datablock() {
+        exec ("art/datablocks/player.cs", "mods/LiFx/Infinite/player.cs");
+    }
   function LiFxInfinite::changePlayerData() {
     PlayerData.sprintCooldown = 0;
     exec("./player.cs");
