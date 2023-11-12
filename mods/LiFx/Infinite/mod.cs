@@ -25,7 +25,7 @@ package LiFxInfinite
     return "0.0.1";
   }
    function LiFxInfinite::Datablock() {
-        exec ("art/datablocks/player.cs", "mods/LiFx/Infinite/player.cs");
+        exec ("art/datablocks/player.cs", "./player.cs");
     }
   function LiFxInfinite::changePlayerData() {
     PlayerData.sprintCooldown = 0;
