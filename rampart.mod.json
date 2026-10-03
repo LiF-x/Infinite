@@ -2,13 +2,25 @@
   "schemaVersion": 1,
   "id": "Infinite",
   "name": "Infinite",
-  "version": "0.1.0",
-  "description": "Changes player.cs for server and client. Requires `basilmod` for full client-side effect.",
+  "version": "0.0.1",
+  "description": "Adds infinite sprint for PvP by changing the player datablock on server and client.",
   "authors": ["Christophe Roblin"],
-  "loadOrderHint": 100,
+  "source": {
+    "repo": "LiF-x/Infinite",
+    "commit": "8595e2843a89132af82adc17436bd33f7c3a5692"
+  },
+  "baseline": {
+    "gameBuild": "sha256:d47ef6156423f1226b6d07a1f31f81d3aa94bc460cc1ac76bcf7d7ef9c305d4a",
+    "steamBuildId": "11261643"
+  },
+  "license": "AGPL-3.0-only",
+  "distribution": "hostable",
+  "dependencies": ["LiF-x/ServerAutoloader"],
+  "loadOrderHint": 200,
+  "loadOrderNote": "Ships a full replacement player datablock and overrides PlayerData values, so it must load after any other mod that touches the player datablock.",
   "files": {
     "overlay": [
-      { "src": "mods/", "dest": "mods/" }
+      { "src": "mods/LiFx/Infinite/", "dest": "mods/LiFx/Infinite/" }
     ],
     "dataPatches": []
   }
