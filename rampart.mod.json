@@ -3,7 +3,7 @@
   "id": "Infinite",
   "name": "Infinite",
   "version": "0.0.1",
-  "description": "Adds infinite sprint for PvP by changing the player datablock on server and client.",
+  "description": "Changes player.cs for server and client. Requires `basilmod` for full client-side effect.",
   "authors": ["Christophe Roblin"],
   "source": {
     "repo": "LiF-x/Infinite",
